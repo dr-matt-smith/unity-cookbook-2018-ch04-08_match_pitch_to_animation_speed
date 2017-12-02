@@ -10,8 +10,8 @@ public class ChangePitch : MonoBehaviour
 	// Float variable for incrementing the Animation speed
 	public float acceleration = 0.05f;
 
-	// Float for keeping speed bottom limit;
-	public float minSpeed = 0.0f;
+    // Float for keeping speed bottom limit;
+    public float minSpeed = -2.0F;
 
 	// Float for keeping speed top limit;
 	public float maxSpeed = 2.0f;
@@ -88,5 +88,7 @@ public class ChangePitch : MonoBehaviour
 		// Update AudioSource pitch with absolute value of 'soundPitch'
 		// (conversion to Absolute value needed in case animation is reversed by negative speed value)
 		audioSource.pitch = Mathf.Abs(soundPitch);
+
+
 	}
 }
